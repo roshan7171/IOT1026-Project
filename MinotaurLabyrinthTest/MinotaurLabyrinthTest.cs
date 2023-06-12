@@ -10,15 +10,15 @@ namespace MinotaurLabyrinthTest
         {
             Pit pitRoom = new Pit();
             Hero hero = new Hero();
-            Map map = new Map(1,1);
+            Map map = new Map(1, 1);
 
             pitRoom.Activate(hero, map);
             Assert.AreEqual(pitRoom.IsActive, false);
-            Assert.Equals(hero.IsAlive, true);
+            Assert.AreEqual(hero.IsAlive, true);
 
             hero.HasSword = true;
             pitRoom.Activate(hero, map);
-            Assert.Equals(hero.IsAlive, false);
+            Assert.AreEqual(hero.IsAlive, false);
         }
     }
 }
