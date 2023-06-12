@@ -18,6 +18,11 @@ namespace MinotaurLabyrinthTest
 
             hero.HasSword = true;
             pitRoom.Activate(hero, map);
+            // Hero should not die because pitRoom is inactive here
+            Assert.AreEqual(hero.IsAlive, true);
+
+            Pit newPitRoom = new Pit();
+            newPitRoom.Activate(hero, map);
             Assert.AreEqual(hero.IsAlive, false);
         }
     }
