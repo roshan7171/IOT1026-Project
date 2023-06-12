@@ -6,6 +6,7 @@ namespace MinotaurLabyrinth
     // 1. Add your Room to the list of enums on line 60 in the Utils.cs file
     // 2. Add the code 'AddRooms(RoomType.MyRoom, map);' to the LabyrinthCreator.cs file below where the Pit room is added (line 48)
     // 3. Implement the Activate, Display and DisplaySense methods.
+    // 4. Add documentation and a description of your room (any maybe an image?) to the README.
     public class MyRoom : Room
     {
         static MyRoom()
