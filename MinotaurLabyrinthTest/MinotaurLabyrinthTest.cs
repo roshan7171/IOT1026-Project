@@ -28,6 +28,13 @@ namespace MinotaurLabyrinthTest
             Pit newPitRoom = new Pit();
             newPitRoom.Activate(hero, map);
             Assert.AreEqual(hero.IsAlive, true);
+
+            newPitRoom.Activate(hero, map);
+            newPitRoom = new Pit();
+            newPitRoom.Activate(hero, map);
+            newPitRoom = new Pit();
+            newPitRoom.Activate(hero, map);
+            Assert.AreEqual(hero.IsAlive, false);
         }
     }
 
