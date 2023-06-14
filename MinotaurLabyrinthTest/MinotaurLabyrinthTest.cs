@@ -3,11 +3,13 @@
 namespace MinotaurLabyrinthTest
 {
     [TestClass]
-    public class Tests
+    public class RoomTests
     {
         [TestMethod]
         public void PitRoomTest()
         {
+            RandomNumberGenerator.SetSeed(1);
+
             Pit pitRoom = new Pit();
             Hero hero = new Hero();
             Map map = new Map(1, 1);
@@ -23,7 +25,15 @@ namespace MinotaurLabyrinthTest
 
             Pit newPitRoom = new Pit();
             newPitRoom.Activate(hero, map);
-            Assert.AreEqual(hero.IsAlive, false);
+            Assert.AreEqual(hero.IsAlive, true);
+        }
+    }
+
+    public class MonsterTests {
+        [TestMethod]
+        public void MinotaurTest() {
+            Hero hero = new Hero();
+            Minotaur minotaur = new Minotaur();
         }
     }
 }

@@ -21,10 +21,24 @@
         /// </summary>
         public override void Activate(Hero hero, Map map)
         {
+
             if (IsActive)
             {
                 ConsoleHelper.WriteLine("You walk into the room and the floor gives way revealing a pit of sharp spikes adorned with other adventurers!", ConsoleColor.Red);
-                if (hero.GetAgility() >= 10)
+                // Could update these probabilities to be based off the hero attributes
+                double chanceOfSuccess = hero.HasSword ? 0.25 : 0.75;
+
+                if (hero.HasSword)
+                {
+                    ConsoleHelper.WriteLine("The sword goes flying as your wildly flail your arms desperately trying to get hold of the pit's edge.", ConsoleColor.DarkMagenta);
+                    hero.HasSword = false;
+                }
+                else
+                {
+                    ConsoleHelper.WriteLine("You wildly flail your arms desperately trying to get hold of the pit's edge.", ConsoleColor.DarkMagenta);
+                }
+
+                if (RandomNumberGenerator.NextDouble() < chanceOfSuccess)
                 {
                     IsActive = false;
                     ConsoleHelper.WriteLine("You manage to grab the side of the pit and pull yourself onto safe ground", ConsoleColor.Green);
