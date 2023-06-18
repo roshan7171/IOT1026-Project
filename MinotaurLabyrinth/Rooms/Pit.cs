@@ -21,6 +21,7 @@
         /// </summary>
         public override void Activate(Hero hero, Map map)
         {
+
             if (IsActive)
             {
                 ConsoleHelper.WriteLine("You walk into the room and the floor gives way revealing a pit of sharp spikes adorned with other adventurers!", ConsoleColor.Red);

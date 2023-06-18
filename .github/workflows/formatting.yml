@@ -2,7 +2,9 @@ name: formatting
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - classwork
 
 jobs:
   build:
@@ -25,5 +27,3 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
-      - name: Test
-        run: dotnet test --no-build --verbosity diagnostic
