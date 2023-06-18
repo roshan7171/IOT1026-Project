@@ -12,7 +12,7 @@
 </p>
 
 # IOT1026-Project
-Write a description of your `Room` and `Monster` class here.
+This project is all about making a online game.
 
 [Assignment Instructions](docs/instructions.md)  
 [How to start coding](docs/how-to-use.md)  
